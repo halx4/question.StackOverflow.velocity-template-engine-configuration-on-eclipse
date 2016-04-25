@@ -73,8 +73,8 @@ public class ArticleBeanInfo extends java.beans.SimpleBeanInfo {
             getIsInactiveMethodDescriptor()
             getActivateMethodDescriptor()
             getInvalidateMethodDescriptor()
-            getIsInvalidMethodDescriptor()
             getIsActiveMethodDescriptor()
+            getIsInvalidMethodDescriptor()
             getDeactivateMethodDescriptor()
         };
     }
@@ -265,39 +265,6 @@ public class ArticleBeanInfo extends java.beans.SimpleBeanInfo {
     }
 
     /**
-     * Returns the isInvalid() method descriptor.
-     *
-     * @return the method descriptor
-     */
-    public MethodDescriptor getIsInvalidMethodDescriptor() {
-
-        try {
-            // finds the method using getMethod with parameter types
-            Class<?>[] parameterTypes = {};
-            Method method = getBeanClass().getMethod("isInvalid", parameterTypes);
-
-            // creates the method parameter descriptors
-
-            ParameterDescriptor[] parameterDescriptors = {
-            };
-
-            MethodDescriptor descriptor = new MethodDescriptor(method, parameterDescriptors);
-
-            descriptor.setName("isInvalid()");
-            descriptor.setDisplayName("isInvalid()");
-            descriptor.setShortDescription("");
-            descriptor.setExpert(false);
-            descriptor.setHidden(false);
-            descriptor.setPreferred(false);
-
-            return descriptor;
-
-        } catch (NoSuchMethodException | SecurityException e) {
-            return null;
-        }
-    }
-
-    /**
      * Returns the isActive() method descriptor.
      *
      * @return the method descriptor
@@ -318,6 +285,39 @@ public class ArticleBeanInfo extends java.beans.SimpleBeanInfo {
 
             descriptor.setName("isActive()");
             descriptor.setDisplayName("isActive()");
+            descriptor.setShortDescription("");
+            descriptor.setExpert(false);
+            descriptor.setHidden(false);
+            descriptor.setPreferred(false);
+
+            return descriptor;
+
+        } catch (NoSuchMethodException | SecurityException e) {
+            return null;
+        }
+    }
+
+    /**
+     * Returns the isInvalid() method descriptor.
+     *
+     * @return the method descriptor
+     */
+    public MethodDescriptor getIsInvalidMethodDescriptor() {
+
+        try {
+            // finds the method using getMethod with parameter types
+            Class<?>[] parameterTypes = {};
+            Method method = getBeanClass().getMethod("isInvalid", parameterTypes);
+
+            // creates the method parameter descriptors
+
+            ParameterDescriptor[] parameterDescriptors = {
+            };
+
+            MethodDescriptor descriptor = new MethodDescriptor(method, parameterDescriptors);
+
+            descriptor.setName("isInvalid()");
+            descriptor.setDisplayName("isInvalid()");
             descriptor.setShortDescription("");
             descriptor.setExpert(false);
             descriptor.setHidden(false);

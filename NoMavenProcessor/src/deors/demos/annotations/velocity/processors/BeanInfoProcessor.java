@@ -176,8 +176,8 @@ public class BeanInfoProcessor
                 printNote("MARK2");
                 VelocityEngine ve = new VelocityEngine();
                 printNote("MARK3");
-               try{ ve.init(props); }
-               catch(Exception e){printNote("FAIL");}
+                ve.init(props);
+                
                 
                 printNote("MARK4");
                 VelocityContext vc = new VelocityContext();
